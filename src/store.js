@@ -5,7 +5,7 @@ export const useConfigratorStore = create((set) => ({
   categories: [],
   currentCategory: null,
   assets: [],
-  customization: {},
+  customization: {}, /* "hair: {}*/
   fetchCategories: () => {
     //백엔드에서 받아올 데이터
     const categoriesTemp = categories;
@@ -15,7 +15,7 @@ export const useConfigratorStore = create((set) => ({
       category.assets = assetsTemp.filter(
         (asset) => asset.group === category.name
       );
-      customizationTemp[category.name] = {};
+      customizationTemp[category.name] = {}; 
     });
     set({
       categories: categoriesTemp,

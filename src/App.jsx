@@ -9,11 +9,15 @@ function App() {
       <UI />
       <Canvas
         camera={{
-          position: [0, 2, 3],
+          position: [0, 7, 0],
         }}
+        shadows
       >
-        <color attach="background" args={["#333333"]} />
-        <Experience />
+        <color attach="background" args={["#555"]} />
+        <fog attach="fog" args={["#555", 15, 25]} />
+        <group position-y={1}>
+          <Experience />
+        </group>
       </Canvas>
     </>
   );
