@@ -7,7 +7,7 @@ export default function Asset({ url, skeleton }) {
   const attachedItems = useMemo(() => {
     const item = [];
     scene.traverse((child) => {
-      if (child.isMesh) {
+      if (child.isGroup) {
         item.push({
           geometry: child.geometry,
           material: child.material,
