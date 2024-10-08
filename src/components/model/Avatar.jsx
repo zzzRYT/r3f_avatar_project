@@ -7,6 +7,7 @@ export default function Avatar({ ...props }) {
   const group = useRef();
   const { nodes } = useGLTF("models/Armature.glb");
   const customization = useConfigratorStore((state) => state.customization);
+  console.log(nodes);
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">

@@ -5,19 +5,16 @@ export default function Asset({ url, skeleton }) {
   const { scene } = useGLTF(url);
 
   const attachedItems = useMemo(() => {
-    const item = [];
+    const items = [];
     scene.traverse((child) => {
-      if (child.isGroup) {
-        item.push({
+      if (child.isMesh) {
+        items.push({
           geometry: child.geometry,
           material: child.material,
         });
       }
     });
-    if (item.length === 0) {
-      return 0;
-    }
-    return item;
+    return items;
   }, [scene]);
 
   return attachedItems.map((item, index) => (
