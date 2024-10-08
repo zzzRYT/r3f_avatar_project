@@ -14,6 +14,9 @@ export default function Asset({ url, skeleton }) {
         });
       }
     });
+    if (item.length === 0) {
+      return 0;
+    }
     return item;
   }, [scene]);
 
