@@ -28,6 +28,7 @@ export const assets = [
     name: "Finishing_01",
     thumbnail: "images/ring.png",
     url: "models/ring.glb",
+    price: 3000,
   },
   {
     id: "asset02",
@@ -35,6 +36,7 @@ export const assets = [
     name: "Finishing_02",
     thumbnail: "images/ring2.png",
     url: "models/ring2.glb",
+    price: 3000,
   },
   {
     id: "asset03",
@@ -42,6 +44,7 @@ export const assets = [
     name: "Finishing_03",
     thumbnail: "images/ring3.png",
     url: "models/ring3.glb",
+    price: 3000,
   },
   {
     id: "asset04",
@@ -49,6 +52,7 @@ export const assets = [
     name: "Finishing_04",
     thumbnail: "images/ring4.png",
     url: "models/ring4.glb",
+    price: 3000,
   },
   {
     id: "asset05",
@@ -56,6 +60,7 @@ export const assets = [
     name: "Chain_01",
     thumbnail: "images/chain1.png",
     url: "models/necklace.glb",
+    price: 3000,
   },
   {
     id: "asset06",
@@ -63,6 +68,7 @@ export const assets = [
     name: "Chain_02",
     thumbnail: "images/chain2.png",
     url: "models/necklace2.glb",
+    price: 3000,
   },
   {
     id: "asset05",
@@ -70,6 +76,7 @@ export const assets = [
     name: "Pendant_01",
     thumbnail: "images/pendant1.png",
     url: "models/pendant1.glb",
+    price: 3000,
   },
 
   {
@@ -78,6 +85,7 @@ export const assets = [
     name: "Pendant_01",
     thumbnail: "images/pendant1.png",
     url: "models/pendant1.glb",
+    price: 3000,
   },
 
   {
@@ -86,5 +94,6 @@ export const assets = [
     name: "Pendant_01",
     thumbnail: "images/pendant1.png",
     url: "models/pendant1.glb",
+    price: 3000,
   },
 ];

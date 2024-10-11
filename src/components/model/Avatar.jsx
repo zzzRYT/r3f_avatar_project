@@ -1,13 +1,14 @@
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, useHelper } from "@react-three/drei";
 import { Suspense, useRef } from "react";
 import { useConfigratorStore } from "../../store";
 import Asset from "../Asset";
+import { BoxHelper } from "three";
 
 export default function Avatar({ ...props }) {
   const group = useRef();
   const { nodes } = useGLTF("models/Armature.glb");
   const customization = useConfigratorStore((state) => state.customization);
-  console.log(nodes);
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">

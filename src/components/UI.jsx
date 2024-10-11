@@ -56,10 +56,43 @@ const AssetsBox = () => {
 };
 
 const DownLoadButton = () => {
+  const {
+    categories,
+    currentCategory,
+    fetchCategories,
+    setCurrentCategory,
+    assets,
+    changeAsset,
+    customization,
+    price,
+  } = useConfigratorStore();
+
+  console.log(customization);
+  console.log(price);
   return (
-    <button className="rounded-lg bg-indigo-500 hover:bg-indigo-600 transition-colos duration-300 text-white font-medium px-4 py-3 pointer-events-none">
-      DownLoad
-    </button>
+    <div>
+      <ul>
+        <label>선택 리스트</label>
+        {Object.keys(customization).map((data) => {
+          return (
+            customization[data].asset !== undefined && (
+              <li>
+                <img
+                  style={{ width: "50px", height: "50px" }}
+                  src={customization[data].asset.thumbnail}
+                  alt="선택한 이미지"
+                />
+                {customization[data].asset.name}
+              </li>
+            )
+          );
+        })}
+      </ul>
+      <div>
+        <label>총 가격</label>
+        <span>{price}</span>
+      </div>
+    </div>
   );
 };
 
