@@ -4,6 +4,8 @@ import { useMemo } from "react";
 export default function Asset({ url, skeleton }) {
   const { scene } = useGLTF(url);
 
+  console.log(url, skeleton);
+
   const attachedItems = useMemo(() => {
     const items = [];
     scene.traverse((child) => {
@@ -16,6 +18,8 @@ export default function Asset({ url, skeleton }) {
     });
     return items;
   }, [scene]);
+
+  console.log(attachedItems);
 
   return attachedItems.map((item, index) => (
     <skinnedMesh

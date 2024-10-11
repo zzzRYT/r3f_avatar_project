@@ -13,9 +13,9 @@ export default function Avatar({ ...props }) {
       <group name="Scene">
         <group
           name="Armature"
-          position-y={1}
-          rotation={[Math.PI / 2, 0, 0]}
-          scale={0.01}
+          position={[0, 0, 0]}
+          rotation={[Math.PI / 4, 0, 0]}
+          scale={0.0005}
         >
           <primitive object={nodes.mixamorigHips} />
           {Object.keys(customization).map(

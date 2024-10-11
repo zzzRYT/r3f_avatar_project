@@ -16,7 +16,7 @@ const AssetsBox = () => {
     fetchCategories();
   }, []);
   return (
-    <div className="bg-white gap-6 drop-shadow-md flex flex-col">
+    <div className="bg-white gap-6 drop-shadow-md flex flex-col absolute bottom-0">
       <div className="flex items-center gap-6 pointer-events-auto">
         {categories.map((category) => (
           <button

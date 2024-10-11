@@ -6,14 +6,14 @@ export default function Experience() {
     <>
       <axesHelper args={[5]} />
       <OrbitControls
-        target={[0, 2, 0]}
-        minPolarAngle={Math.PI / 4}
-        maxPolarAngle={Math.PI / 2}
-        minAzimuthAngle={-Math.PI / 4}
+        target={[0, 0, 0]}
+        // minPolarAngle={Math.PI / 4}
+        // maxPolarAngle={Math.PI / 2}
+        // minAzimuthAngle={-Math.PI / 4}
       />
       <Environment preset="sunset" environmentIntensity={0.3} />
 
-      <Backdrop
+      {/* <Backdrop
         scale={[50, 10, 5]}
         floor={1.5} // Stretches the floor segment, 0.25 by default
         recieveShadow // Allows shadows to be cast on the floor
@@ -21,7 +21,7 @@ export default function Experience() {
         segments={20} // Mesh-resolution, 20 by default
       >
         <meshStandardMaterial color="#555" />
-      </Backdrop>
+      </Backdrop> */}
       {/**key light */}
       <directionalLight
         position={[5, 5, 5]}
