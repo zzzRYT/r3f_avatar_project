@@ -35,14 +35,13 @@ export const useConfigratorStore = create((set) => ({
           asset,
         },
       },
-      price: () => {
-        let price = 0;
-        Object.keys(state.customization).map((data) => {
-          if (data.asset !== undefined) {
-            price += data.asset.price;
-          }
-        });
-        return price;
-      },
     })),
+  changePrice: () => {
+    set((state) => ({
+      price: Object.keys(state.customization).reduce((acc, cur) => {
+        const asset = state.customization[cur].asset;
+        return asset ? acc + asset.price : acc;
+      }, 0),
+    }));
+  },
 }));

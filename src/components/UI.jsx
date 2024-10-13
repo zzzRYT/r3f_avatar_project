@@ -10,6 +10,7 @@ const AssetsBox = () => {
     assets,
     changeAsset,
     customization,
+    changePrice,
   } = useConfigratorStore();
 
   useEffect(() => {
@@ -39,7 +40,10 @@ const AssetsBox = () => {
             return (
               <button
                 key={asset.id}
-                onClick={() => changeAsset(currentCategory.name, asset)}
+                onClick={() => {
+                  changeAsset(currentCategory.name, asset);
+                  changePrice();
+                }}
                 className={`w-20 h-20 border-2 pointer-events-auto rounded-md overflow-hidden bg-gray-200 hover:opacity-100 transition-all duration-500 ${
                   customization[currentCategory.name]?.asset?.id === asset.id
                     ? "border-indigo-500 opacity-100"
@@ -56,19 +60,9 @@ const AssetsBox = () => {
 };
 
 const DownLoadButton = () => {
-  const {
-    categories,
-    currentCategory,
-    fetchCategories,
-    setCurrentCategory,
-    assets,
-    changeAsset,
-    customization,
-    price,
-  } = useConfigratorStore();
+  const customization = useConfigratorStore((state) => state.customization);
+  const price = useConfigratorStore((state) => state.price);
 
-  console.log(customization);
-  console.log(price);
   return (
     <div>
       <ul>
