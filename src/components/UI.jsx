@@ -59,7 +59,7 @@ const AssetsBox = () => {
   );
 };
 
-const DownLoadButton = () => {
+const PurchaseList = () => {
   const customization = useConfigratorStore((state) => state.customization);
   const price = useConfigratorStore((state) => state.price);
 
@@ -98,7 +98,7 @@ export const UI = () => {
           <a className="pointer-events-auto">
             <img className="w-20" src="" alt="로고" />
           </a>
-          <DownLoadButton />
+          <PurchaseList />
         </div>
       </div>
       <div className="flex flex-col">

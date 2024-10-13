@@ -17,6 +17,11 @@ export const useConfigratorStore = create((set) => ({
         (asset) => asset.group === category.name
       );
       customizationTemp[category.name] = {};
+      if (categoriesTemp.startingAsset !== "") {
+        customizationTemp[category.name].asset = assetsTemp.find(
+          (asset) => asset.name === category.startingAsset
+        );
+      }
     });
     set({
       categories: categoriesTemp,

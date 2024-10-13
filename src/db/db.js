@@ -2,22 +2,27 @@ export const categories = [
   {
     id: "actegory01",
     name: "Finishing",
+    startingAsset: "Finishing_01",
   },
   {
     id: "actegory02",
     name: "Chain",
+    startingAsset: "Chain_01",
   },
   {
     id: "actegory03",
     name: "Pendant1",
+    startingAsset: "Pendant_01",
   },
   {
     id: "actegory04",
     name: "Pendant2",
+    startingAsset: "",
   },
   {
     id: "actegory05",
     name: "Pendant3",
+    startingAsset: "",
   },
 ];
 
@@ -80,7 +85,7 @@ export const assets = [
   },
 
   {
-    id: "asset05",
+    id: "asset07",
     group: "Pendant2",
     name: "Pendant_01",
     thumbnail: "images/pendant1.png",
@@ -89,7 +94,7 @@ export const assets = [
   },
 
   {
-    id: "asset05",
+    id: "asset08",
     group: "Pendant3",
     name: "Pendant_01",
     thumbnail: "images/pendant1.png",
